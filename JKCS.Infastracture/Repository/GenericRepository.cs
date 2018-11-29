@@ -4,12 +4,12 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using JKCS.Core.IRepository;
 using JKCS.Infastracture.DBConnection;
+using JKCS.Infastracture.IRepository;
 
 namespace JKCS.Infastracture.Repository
 {
-    public abstract class GenericRepository<T> : IGenericRepositiory<T> where T : class 
+    public abstract class GenericRepository<T> : IGenericRepository<T> where T : class 
     {
         internal DbSet<T> EntitySet { get; set; }
         protected EmployeeDBEntities Context { get; set; }

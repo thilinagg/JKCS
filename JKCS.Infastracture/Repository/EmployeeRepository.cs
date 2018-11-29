@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using JKCS.Core.Entities;
-using JKCS.Core.IRepository;
 using JKCS.Infastracture.DBConnection;
+using JKCS.Infastracture.IRepository;
 
 namespace JKCS.Infastracture.Repository
 {
-    public class EmployeeRepository: GenericRepository<EmployeeEntity>, IEmployeeRepository
+    public class EmployeeRepository: GenericRepository<Employee>, IEmployeeRepository
     {
         public EmployeeRepository(EmployeeDBEntities context)
             : base(context)

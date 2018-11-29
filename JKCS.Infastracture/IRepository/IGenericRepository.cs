@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JKCS.Core.IRepository
+namespace JKCS.Infastracture.IRepository
 {
-    public interface IGenericRepositiory<T> where T: class
+    public interface IGenericRepository<T> where T : class
     {
         T Insert(T entity);
         T Update(Func<T, bool> where, T entity);
